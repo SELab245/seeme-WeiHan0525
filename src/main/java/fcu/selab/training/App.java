@@ -32,14 +32,20 @@ public class App {
 			//±∆ß«
 			Arrays.sort(token);
 
-			//¶L•X
+			//ºg¿…
+			FileWriter fw = new FileWriter("E:\\Git\\Seeme_HW\\output.txt");
+			
 			for (int i = 0; i < token.length; i++) {
-				System.out.println(token[i].substring(0,1).toLowerCase()+"."+token[i]);
+				fw.write(token[i].substring(0,1).toLowerCase() + ". "+token[i] + " ");
 			}
+			
+			System.out.println("Sucess!");
+			file.close();
+			fw.close();
 		}
 		
 		catch (IOException e) {
-			System.out.println(e);
+			System.out.println("Fail to open the file.");
 		}
 	}
 
